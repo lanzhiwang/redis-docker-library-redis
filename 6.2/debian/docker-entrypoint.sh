@@ -28,4 +28,7 @@ if [ "$um" = '0022' ]; then
 	umask 0077
 fi
 
+echo "20: $0"
+echo "2@: $@"
+
 exec "$@"

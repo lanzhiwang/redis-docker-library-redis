@@ -1,0 +1,16 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: ["learn-e920499-20240628"]
+  pull_request:
+    branches: ["learn-e920499-20240628"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build ./6.2/debian/ --file 6.2/debian/Dockerfile --tag my-redis:$(date +%s)

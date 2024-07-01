@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+set -x
 
 # first arg is `-f` or `--some-option`
 # or first arg is `something.conf`
